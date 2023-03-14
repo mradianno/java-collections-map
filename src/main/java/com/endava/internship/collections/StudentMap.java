@@ -4,7 +4,7 @@ import java.util.Collection;
 import java.util.Map;
 import java.util.Set;
 
-public class StudentMap implements Map<Student, Integer> {
+public class StudentMap implements Map<Integer,Student> {
     @Override
     public int size() {
         //TODO
@@ -30,25 +30,25 @@ public class StudentMap implements Map<Student, Integer> {
     }
 
     @Override
-    public Integer get(Object o) {
+    public Student get(Object o) {
         //TODO
         return null;
     }
 
     @Override
-    public Integer put(Student student, Integer integer) {
+    public Student put(Integer integer,Student student) {
         //TODO
         return null;
     }
 
     @Override
-    public Integer remove(Object o) {
+    public Student remove(Object o) {
         //TODO
         return null;
     }
 
     @Override
-    public void putAll(Map<? extends Student, ? extends Integer> map) {
+    public void putAll(Map<? extends Integer,? extends Student> map) {
         //TODO
     }
 
@@ -58,19 +58,19 @@ public class StudentMap implements Map<Student, Integer> {
     }
 
     @Override
-    public Set<Student> keySet() {
+    public Set<Integer> keySet() {
         //TODO
         return null;
     }
 
     @Override
-    public Collection<Integer> values() {
+    public Collection<Student> values() {
         //TODO
         return null;
     }
 
     @Override
-    public Set<Entry<Student, Integer>> entrySet() {
+    public Set<Entry<Integer,Student>> entrySet() {
         //Ignore this for homework
         throw new UnsupportedOperationException();
     }
