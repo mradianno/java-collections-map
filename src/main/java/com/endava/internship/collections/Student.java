@@ -17,11 +17,34 @@ public class Student //TODO consider implementing any interfaces necessary for y
         this.details = details;
     }
 
-    public String getName() { return name; }
+    public String getName() {
+        return name;
+    }
 
-    public LocalDate getDateOfBirth() { return dateOfBirth; }
+    public LocalDate getDateOfBirth() {
+        return dateOfBirth;
+    }
 
-    public String getDetails() { return details; }
+    public String getDetails() {
+        return details;
+    }
+
+    public boolean equals(Object o) {
+        if (this == o)
+            return true;
+
+        if (o instanceof Student) {
+            Student currObject = (Student) o;
+            if (currObject.getDateOfBirth().equals(this.dateOfBirth) && currObject.getName().equals(this.name))
+                return true;
+        }
+        return false;
+    }
+
+    public int hashCode(){
+        int hash = 14;
+        return hash * name.hashCode() * dateOfBirth.hashCode();
+    }
 
     /*
     TODO consider overriding any methods for this object to function properly within a collection:
